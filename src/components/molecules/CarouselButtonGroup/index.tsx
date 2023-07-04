@@ -9,7 +9,7 @@ const CarouselButtonGroup: React.FC<ButtonGroupProps> = ({
 }) => {
     const { currentSlide } = carouselState!
     return (
-        <div className="absolute bottom-0 hidden left-[-80px] md:flex">
+        <div className="absolute bottom-0 hidden left-[-80px] lg:flex">
             {homeProjects.map((project) => (
                 <CarouselButton
                     key={project.id}

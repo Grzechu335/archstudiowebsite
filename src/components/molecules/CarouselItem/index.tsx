@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { HomeProjectType } from '../../../../types/HomeProject'
 import Button from '@/components/atoms/Button'
+import useDevice from '../../../../hooks/useDevice'
 
 const CarouselItem: React.FC<HomeProjectType> = ({
     images,
@@ -10,23 +11,8 @@ const CarouselItem: React.FC<HomeProjectType> = ({
     title,
     description,
 }) => {
-    const [device, setDevice] = useState<'sm' | 'md' | 'lg' | undefined>(
-        undefined
-    )
-    useEffect(() => {
-        const resizeHandler = () => {
-            if (window.innerWidth < 375) {
-                setDevice('sm')
-            } else if (window.innerWidth >= 375 && window.innerWidth < 768) {
-                setDevice('md')
-            } else {
-                setDevice('lg')
-            }
-        }
-        window.addEventListener('resize', resizeHandler)
-    })
-
-    const setSource = () => {
+    const device = useDevice()
+    const responsiveSource = () => {
         if (typeof device !== 'undefined') {
             if (device === 'sm') {
                 return images.sm
@@ -38,7 +24,7 @@ const CarouselItem: React.FC<HomeProjectType> = ({
     return (
         <div className="relative flex flex-col space-y-10 bg-[#000]/50 px-8 md:px-[58px] justify-center lg:px-[190px] h-[720px] w-full">
             <Image
-                src={setSource()}
+                src={responsiveSource()}
                 alt={alt}
                 fill
                 quality={100}
