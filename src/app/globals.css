@@ -16,12 +16,18 @@
         @apply font-bold text-[250px] tracking-[-5px] leading-[200px];
     }
     .heading-lg {
-        @apply font-bold text-[96px] tracking-[-2px] leading-[80px];
+        @apply font-bold text-[48px] md:text-[96px] tracking-[-1.2px] md:tracking-[-2px] leading-[48px] md:leading-[80px];
     }
     .heading-md {
         @apply font-bold text-[72px] tracking-[-2px] leading-[64px];
     }
     .heading-sm {
         @apply font-bold text-[32px] tracking-[0px] leading-[40px];
+    }
+    .wrapper-padding {
+        @apply px-8 md:px-[100px] lg:px-[165px];
+    }
+    .writing-vertical {
+        writing-mode: vertical-lr;
     }
 }

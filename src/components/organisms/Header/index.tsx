@@ -12,14 +12,15 @@ const Header: React.FC = () => {
         setOpen((prev) => !prev)
     }
     return (
-        <div className="fixed top-0 left-0 w-screen h-[96px] md:h-[152px] p-8 md:p-0">
+        <div className="fixed top-0 left-0 z-[999] bg-[#fff] w-screen h-[96px] md:h-[152px] wrapper-padding">
             <header className="flex justify-between md:justify-start md:space-x-[79px] lg:space-x-[95px] h-full items-center max-w-screen-xl mx-auto">
-                <Image
-                    src={logo}
-                    alt="logo image"
-                    width={100}
-                    height={40}
-                />
+                <div className="relative w-[70px] h-[32px] md:w-[96px] md:h-[40px] ">
+                    <Image
+                        src={logo}
+                        alt="logo image"
+                        fill
+                    />
+                </div>
                 <nav>
                     <ul className="items-center text-medium-gray space-x-[60px] hidden md:flex">
                         {navItems.map((item) => (

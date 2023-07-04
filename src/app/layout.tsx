@@ -20,7 +20,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={leagueSparatan.variable}>
+            <body
+                className={`pt-[96px] md:pt-[152px] wrapper-padding ${leagueSparatan.variable}`}
+            >
                 <Header />
                 {children}
             </body>
