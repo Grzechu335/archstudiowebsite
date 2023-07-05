@@ -23,13 +23,13 @@ const CarouselItem: React.FC<HomeProjectType> = ({
         } else return images.lg
     }
     return (
-        <div className="relative flex flex-col space-y-10 bg-[#000]/50 px-8 md:px-[58px] justify-center lg:px-[190px] h-[720px] w-full">
+        <div className="relative flex flex-col space-y-10 bg-black/50 px-8 md:px-[58px] justify-center lg:px-[190px] h-[720px] w-full">
             <Image
                 src={responsiveSource()}
                 alt={alt}
                 fill
                 quality={100}
-                className="-z-10"
+                className="relative pointer-events-none -z-50"
             />
             <div className="space-y-[10px] lg:w-[90%]">
                 <h2 className="heading-lg text-very-light-gray">{title}</h2>

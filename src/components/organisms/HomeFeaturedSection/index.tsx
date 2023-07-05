@@ -10,7 +10,7 @@ const HomeFeaturedSection: React.FC = () => {
                 <h3 className="heading-md">Featured</h3>
                 <Button
                     className="hidden md:flex"
-                    href="/projects"
+                    href="/portfolio"
                 >
                     See All
                 </Button>
@@ -24,7 +24,7 @@ const HomeFeaturedSection: React.FC = () => {
                 ))}
                 <Button
                     className="justify-center w-full md:hidden"
-                    href="/projects"
+                    href="/portfolio"
                 >
                     See All
                 </Button>

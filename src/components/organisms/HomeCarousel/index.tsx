@@ -12,6 +12,7 @@ const HomeCarousel: React.FC = () => {
         <div className="relative -mx-8 md:mx-0">
             <Carousel
                 arrows={false}
+                infinite
                 autoPlay
                 autoPlaySpeed={5000}
                 renderButtonGroupOutside={true}

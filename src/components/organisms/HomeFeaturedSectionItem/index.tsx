@@ -35,7 +35,7 @@ const HomeFeaturedSectionItem: React.FC<HomeFeaturedProjectType> = ({
             <h4 className="text-white heading-sm">{title}</h4>
             <Link
                 className="text-white inline-block w-fit relative text-opacity-75 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:transition-all after:duration-500 after:bg-white/75 hover:after:w-full"
-                href="/projects"
+                href="/portfolio"
             >
                 View All Projects
             </Link>
