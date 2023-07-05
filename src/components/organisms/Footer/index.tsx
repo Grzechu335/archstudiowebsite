@@ -32,7 +32,10 @@ const Footer: React.FC = () => {
                     </ul>
                 </nav>
                 {/* Button */}
-                <Button className="right-0 mt-8 md:mt-0 flex justify-center md:absolute md:w-fit w-[80%]">
+                <Button
+                    href="/portfolio"
+                    className="right-0 mt-8 md:mt-0 flex justify-center md:absolute md:w-fit w-[80%]"
+                >
                     See Our Portfolio
                 </Button>
             </div>
