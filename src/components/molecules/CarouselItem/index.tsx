@@ -1,13 +1,14 @@
 'use client'
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import { HomeProjectType } from '../../../../types/HomeProject'
 import Button from '@/components/atoms/Button'
+import Image from 'next/image'
+import React from 'react'
 import useDevice from '../../../../hooks/useDevice'
+import { HomeProjectType } from '../../../../types/HomeProject'
 
 const CarouselItem: React.FC<HomeProjectType> = ({
     images,
     alt,
+
     title,
     description,
 }) => {

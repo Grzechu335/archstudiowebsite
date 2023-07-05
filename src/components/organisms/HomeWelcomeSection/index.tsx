@@ -5,7 +5,7 @@ import welcomeImage from 'public/assets/home/desktop/image-welcome.jpg'
 const HomeWelcomeSection: React.FC = () => {
     return (
         <section className="grid grid-cols-12 md:gap-[48px] lg:gap-[65px] relative">
-            <h1 className="absolute left-0 z-10 hidden md:inline -top-36 lg:-top-24 heading-xl text-very-light-gray">
+            <h1 className="absolute left-0 z-10 hidden md:inline -top-36 lg:-top-32 heading-xl text-very-light-gray">
                 Welcome
             </h1>
             <div className="flex flex-col space-y-12 lg:space-y-16 col-span-full lg:justify-end lg:col-span-6 lg:col-start-3">

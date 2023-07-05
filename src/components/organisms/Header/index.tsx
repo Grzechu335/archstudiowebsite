@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     }
     return (
         <div className="fixed top-0 left-0 z-[999] bg-[#fff] w-screen h-[96px] md:h-[152px] wrapper-padding">
-            <header className="flex justify-between md:justify-start md:space-x-[79px] lg:space-x-[95px] h-full items-center max-w-screen-xl mx-auto">
+            <header className="flex justify-between md:justify-start md:space-x-[79px] lg:space-x-[95px] h-full items-center max-w-screen-lg mx-auto">
                 <div className="relative w-[70px] h-[32px] md:w-[96px] md:h-[40px] ">
                     <Image
                         src={logo}

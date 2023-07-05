@@ -8,7 +8,7 @@ type NavItemProps = {
 
 const NavItem: React.FC<NavItemProps> = ({ name, href }) => {
     return (
-        <li className="hover:text-very-dark-blue">
+        <li className="hover:text-very-dark-blue whitespace-nowrap">
             <Link href={href}>{name}</Link>
         </li>
     )

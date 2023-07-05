@@ -29,7 +29,7 @@ const HomeFeaturedSectionItem: React.FC<HomeFeaturedProjectType> = ({
                 fill
                 className="-z-10"
             />
-            <span className="absolute hidden md:inline-block right-5 lg:-right-2 top-10  text-[250px] tracking-[-5px] font-bold leading-[200px] text-white/50 ">
+            <span className="absolute hidden md:inline-block right-5 lg:-right-3 top-10  text-[250px] tracking-[-5px] font-bold leading-[200px] text-white/50 ">
                 {id + 1}
             </span>
             <h4 className="text-white heading-sm">{title}</h4>
