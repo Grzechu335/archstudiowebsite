@@ -8,21 +8,17 @@ import smallTeamSm from 'public/assets/home/mobile/image-small-team.jpg'
 import useDevice from '../../../../hooks/useDevice'
 
 const HomeSmallTeamSection: React.FC = () => {
-    const device = useDevice()
-    const responsiveSource = () => {
-        if (typeof device !== 'undefined') {
-            if (device === 'sm') {
-                return smallTeamLg
-            } else if (device === 'md') {
-                return smallTeamMd
-            } else return smallTeamMd
-        } else return smallTeamSm
-    }
+    const { image } = useDevice({
+        lg: smallTeamLg,
+        md: smallTeamMd,
+        sm: smallTeamSm,
+    })
+
     return (
         <section className="-mx-8">
             <div className="relative h-[560px] w-full bg-[#000]/50 lg:px-[190px] md:px-[58px] px-8 flex flex-col justify-center">
                 <Image
-                    src={responsiveSource()}
+                    src={image}
                     alt="small team image"
                     fill
                     className="-z-10"

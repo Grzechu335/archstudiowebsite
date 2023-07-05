@@ -10,23 +10,14 @@ const PortfolioItem: React.FC<PortfolioProjectType> = ({
     title,
     date,
 }) => {
-    const device = useDevice()
-    const responsiveSource = () => {
-        if (typeof device !== 'undefined') {
-            if (device === 'sm') {
-                return images.sm
-            } else if (device === 'md') {
-                return images.md
-            } else return images.lg
-        } else return images.lg
-    }
+    const { image } = useDevice({ ...images })
     return (
         <div
             key={id}
             className="relative p-6 lg:p-[40px] hover:bg-white/50 transition-colors duration-200 h-[240px] lg:h-[560px] flex flex-col justify-end bg-gradient-to-b from-transparent to-black/50"
         >
             <Image
-                src={responsiveSource()}
+                src={image}
                 alt={`${title} image`}
                 fill
                 className="-z-10"

@@ -8,24 +8,15 @@ import { HomeProjectType } from '../../../../types/HomeProject'
 const CarouselItem: React.FC<HomeProjectType> = ({
     images,
     alt,
-
     title,
     description,
 }) => {
-    const device = useDevice()
-    const responsiveSource = () => {
-        if (typeof device !== 'undefined') {
-            if (device === 'sm') {
-                return images.sm
-            } else if (device === 'md') {
-                return images.md
-            } else return images.lg
-        } else return images.lg
-    }
+    const { image } = useDevice({ ...images })
+
     return (
         <div className="relative flex flex-col space-y-10 bg-black/50 px-8 md:px-[58px] justify-center lg:px-[190px] h-[720px] w-full">
             <Image
-                src={responsiveSource()}
+                src={image}
                 alt={alt}
                 fill
                 quality={100}

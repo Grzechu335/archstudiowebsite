@@ -11,20 +11,11 @@ const HomeFeaturedSectionItem: React.FC<HomeFeaturedProjectType> = ({
     images,
     title,
 }) => {
-    const device = useDevice()
-    const responsiveSource = () => {
-        if (typeof device !== 'undefined') {
-            if (device === 'sm') {
-                return images.sm
-            } else if (device === 'md') {
-                return images.md
-            } else return images.lg
-        } else return images.lg
-    }
+    const { image } = useDevice({ ...images })
     return (
         <div className="relative bg-gradient-to-b flex flex-col justify-end from-transparent to-black/50 h-[240px] lg:h-[560px] p-[40px]">
             <Image
-                src={responsiveSource()}
+                src={image}
                 alt={alt}
                 fill
                 className="-z-10"

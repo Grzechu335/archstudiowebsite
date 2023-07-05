@@ -1,9 +1,31 @@
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { StaticImageData } from 'next/image'
 import React, { useEffect, useState } from 'react'
 
-const useDevice = () => {
+type useDeviceProps = {
+    lg: StaticImageData
+    md: StaticImageData
+    sm: StaticImageData
+}
+
+const useDevice = ({ lg, md, sm }: useDeviceProps) => {
     const [device, setDevice] = useState<'sm' | 'md' | 'lg' | undefined>(
         undefined
     )
+    const [image, setImage] = useState<StaticImport | string>(lg)
+
+    const responsiveSource = () => {
+        if (typeof device !== 'undefined') {
+            if (device === 'sm') {
+                setImage(sm)
+            } else if (device === 'md') {
+                setImage(md)
+            } else setImage(lg)
+        } else setImage(lg)
+    }
+    useEffect(() => {
+        responsiveSource()
+    }, [device])
     useEffect(() => {
         const resizeHandler = () => {
             if (window.innerWidth < 375) {
@@ -19,7 +41,7 @@ const useDevice = () => {
             window.removeEventListener('resize', resizeHandler)
         }
     })
-    return device
+    return { device, image }
 }
 
 export default useDevice

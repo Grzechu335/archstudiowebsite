@@ -1,6 +1,5 @@
 import React from 'react'
 import portfolioProjects from '../../../utils/portfolio'
-import Image from 'next/image'
 import PortfolioItem from '@/components/molecules/PortfolioItem'
 
 const Portfolio: React.FC = () => {
