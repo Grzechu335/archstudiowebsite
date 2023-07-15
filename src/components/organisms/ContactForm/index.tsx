@@ -56,6 +56,7 @@ const ContactForm: React.FC = () => {
                             message: 'Wrong address email',
                         },
                     })}
+                    type="email"
                     error={errors.email}
                     placeholder="Email"
                 />

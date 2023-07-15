@@ -1,15 +1,16 @@
 import clsx from 'clsx'
-import React from 'react'
+import React, { HTMLInputTypeAttribute } from 'react'
 import { FieldError } from 'react-hook-form'
 
 type CustomInputProps = {
     placeholder?: string
     error?: FieldError
+    type?: HTMLInputTypeAttribute
 }
 
 const CustomInput = React.forwardRef<HTMLInputElement, CustomInputProps>(
     (props, ref) => {
-        const { placeholder, error, ...rest } = props
+        const { placeholder, error, type = 'text', ...rest } = props
         return (
             <label
                 className={clsx(
@@ -28,7 +29,7 @@ const CustomInput = React.forwardRef<HTMLInputElement, CustomInputProps>(
                 <input
                     {...rest}
                     placeholder={placeholder}
-                    type="text"
+                    type={type}
                     ref={ref}
                     className={clsx(
                         'font-bold outline-none placeholder-text-light-gray placeholder:font-bold',
