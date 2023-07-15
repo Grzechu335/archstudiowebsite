@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align='center'>
+    <h1>Arch Studio</h1>
+    <p><i>Designed by Frontend Mentor</i></p>
+    <p><a href='https://archstudiowebsite.vercel.app'>DEMO</a></p>
+    <div>
+        <img src='https://img.shields.io/github/deployments/grzechu335/archstudiowebsite/production?style=for-the-badge'/>
+        <img src='https://img.shields.io/github/license/grzechu335/archstudiowebsite?style=for-the-badge'/>
+        <img src='https://img.shields.io/github/languages/top/grzechu335/archstudiowebsite?style=for-the-badge'/>
+    </div>
+</div>
+
+<!-- Table of contents  -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About the Project</a></li>
+    <li><a href="#project-screen-shot">Project Screen Shot</a></li>
+    <li><a href="#technologies">Technologies</a></li>
+    <li><a href="#getting-started">Getting started</a></li>
+  </ol>
+  </details>
+
+## About the Project
+
+Arch Studio is responsive, multi page website built with NextJS 13, Tailwind CSS and
+Typescript.
+
+## Project Screen Shot
+
+![ScreenShotURL]
+
+## Technologies
+
+-   ![TypeScriptBadge]
+-   ![ReactBadge]
+-   ![NextJSBadge]
+-   ![TailwindCSSBadge]
 
 ## Getting Started
 
-First, run the development server:
+1. Clone repo by entering the command
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```sh
+git clone https://github.com/Grzechu335/archstudiowebsite
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install NPM packages (you will need node and npm installed globally on your machine)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Run command on local environment
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. To visit app:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+http://localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Licence
 
-## Deploy on Vercel
+Distributed under the MIT License. See LICENSE.txt for more information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<!-- Links -->
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[typescriptbadge]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[reactbadge]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
+[nextjsbadge]: https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white
+[tailwindcssbadge]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[screenshoturl]: /public/assets/screenshot/screenshot.png
