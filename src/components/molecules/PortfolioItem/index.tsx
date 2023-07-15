@@ -23,7 +23,7 @@ const PortfolioItem: React.FC<PortfolioProjectType> = ({
                 className="-z-10"
             />
             <div className="relative z-10 text-white">
-                <p className="heading-sm">{title}</p>
+                <p className="text-white heading-sm">{title}</p>
                 <span className="text-white/75">{date}</span>
             </div>
         </div>

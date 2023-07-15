@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                 </Link>
                 {/* Nav */}
                 <nav>
-                    <ul className="flex flex-col md:flex-row md:space-x-[60px] space-y-8 md:space-y-0">
+                    <ul className="flex flex-col text-center md:flex-row md:space-x-[60px] space-y-8 md:space-y-0">
                         {navItems.map((item) => (
                             <NavItem
                                 key={item.id}
