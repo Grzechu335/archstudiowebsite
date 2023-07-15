@@ -43,6 +43,7 @@ const FancyHero: React.FC<FancyHeroProps> = ({
                         src={image}
                         alt="hero image"
                         fill
+                        objectFit="cover"
                     />
                 </div>
             </div>

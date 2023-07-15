@@ -13,19 +13,18 @@ const useDevice = ({ lg, md, sm }: useDeviceProps) => {
         undefined
     )
     const [image, setImage] = useState<StaticImport | string>(lg)
-
-    const responsiveSource = () => {
-        if (typeof device !== 'undefined') {
-            if (device === 'sm') {
-                setImage(sm)
-            } else if (device === 'md') {
-                setImage(md)
-            } else setImage(lg)
-        } else setImage(lg)
-    }
     useEffect(() => {
+        const responsiveSource = () => {
+            if (typeof device !== 'undefined') {
+                if (device === 'sm') {
+                    setImage(sm)
+                } else if (device === 'md') {
+                    setImage(md)
+                } else setImage(lg)
+            } else setImage(lg)
+        }
         responsiveSource()
-    }, [device])
+    }, [device, sm, md, lg])
     useEffect(() => {
         const resizeHandler = () => {
             if (window.innerWidth < 375) {

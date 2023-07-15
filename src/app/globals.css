@@ -9,6 +9,9 @@
     body {
         @apply font-medium text-[18px] tracking-[0px] leading-[24px];
     }
+    p {
+        @apply text-dark-gray;
+    }
 }
 
 @layer utilities {
